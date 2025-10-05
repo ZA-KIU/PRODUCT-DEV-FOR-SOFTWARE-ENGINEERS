@@ -10,7 +10,7 @@
 | 3 Problem Ideas | Thu 11:59 PM | Google Form |
 | Team Contract | End of Fri Lab | Team Repo |
 | ICP Draft | End of Fri Lab | Team Repo |
-| 10 Interview Questions | Mon 11:59 PM | Google Form |
+| 10 Interview Questions | Sun 11:59 PM | Google Form |
 | Refined ICP + Outreach | Tue 6:00 PM | Team Repo + Channel |
 
 ---
