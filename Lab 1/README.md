@@ -101,7 +101,7 @@ Commit to your team repo with this structure:
 
 ---
 
-## 📚 Homework (Due Tuesday before Week 2)
+## 📚 Homework (Due Sunday October 12th before Week 2)
 
 ### Individual Work (90 minutes)
 
