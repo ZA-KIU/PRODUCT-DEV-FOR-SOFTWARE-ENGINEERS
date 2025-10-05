@@ -13,13 +13,11 @@ THURSDAY (30 min)
 FRIDAY (60 min in class)
 └─ Lab: Team formation, contract, problem selection, ICP
 
-SATURDAY/SUNDAY (90 min)
+SATURDAY (90 min)
 └─ Read Mom Test chapters, watch videos, draft questions
 
-MONDAY (30 min)
+Sunday (30 min)
 └─ Submit 10 interview questions by 11:59 PM
-
-TUESDAY (60 min)
 └─ Team: Refine ICP, post outreach, schedule interviews
 └─ All team deliverables due by 6:00 PM
 ```
