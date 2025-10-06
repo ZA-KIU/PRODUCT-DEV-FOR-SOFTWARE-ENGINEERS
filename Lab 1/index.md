@@ -48,38 +48,6 @@
 
 ---
 
-## 📥 Download Instructions
-
-Each file in this folder can be downloaded individually. The complete structure is:
-
-```
-Lab-1/
-├── INDEX.md (this file)
-├── README.md
-├── QUICK-START-GUIDE.md
-├── LAB-1-CHEAT-SHEET.md
-├── INSTRUCTOR-GUIDE.md
-├── GRADING-RUBRIC.md
-├── PRE-LAB-EMAIL-TEMPLATE.md
-├── FOLDER-STRUCTURE.md
-├── templates/
-│   ├── team-contract-template.md
-│   ├── icp-template.md
-│   ├── interview-questions-template.md
-│   └── submission-checklist.md
-├── resources/
-│   ├── mom-test-summary.md
-│   ├── jtbd-guide.md
-│   ├── interview-tips.md
-│   ├── conflict-resolution.md
-│   ├── problem-statement-examples.md
-│   └── repo-structure-guide.md
-└── examples/
-    ├── sample-team-contract.md
-    ├── sample-icp.md
-    └── team-assignments.md
-```
-
 ---
 
 ## 🚀 Quick Setup
@@ -88,8 +56,6 @@ Lab-1/
 2. Download all other files listed above
 3. Organize into the folder structure shown
 4. Upload to your GitHub repository
-
-Total: 21 files across 4 folders
 
 ---
 
