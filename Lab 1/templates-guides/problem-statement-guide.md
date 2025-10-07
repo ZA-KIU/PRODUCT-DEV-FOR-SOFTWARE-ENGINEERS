@@ -354,3 +354,10 @@ Before finalizing your problem statement:
 ---
 
 **Your problem statement is your North Star. Get it right. 🌟**
+
+THE 4 FILTERS (Explained with examples)
+🔥 Hair on Fire Test: "Imagine two problems: (A) 'My sock drawer is messy,' and (B) 'My basement is flooding.' Which one do you solve first? The flooding is the hair-on-fire problem. It's urgent, painful, and you'd pay anything to fix it. We are looking for flooded basements, not messy sock drawers."
+👥 Access Test: "Let's say you have a brilliant idea for improving surgical robotics. Great problem. But can you find and talk to 10 surgeons this week? Probably not. We need problems where you have direct, immediate access to the target users. 'CS students who struggle with environment setup' is a perfect example. You are sitting in a room full of them."
+🛠️ Feasibility Test: "Can a team of 4-5 students build a meaningful MVP in 10 weeks? A new social media platform to compete with Instagram? No. A Chrome extension that helps you focus by blocking certain sites? Absolutely. We need to stay in the realm of the possible."
+⚡ Personal Energy Test: "This is the most underrated filter. You will be working on this problem for hundreds of hours. If you are not personally fascinated by it, you will burn out. If the thought of interviewing 20 people about this topic sounds like a chore, it fails this test."
+
