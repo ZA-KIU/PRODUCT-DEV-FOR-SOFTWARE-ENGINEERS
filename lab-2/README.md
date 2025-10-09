@@ -72,7 +72,7 @@ In this lab, your team will:
 
 All files go in your team repo under `/00-foundation/` and `/01-discovery/`:
 
-### Due by End of Lab (Today):
+### Started on Today in the Lab:
 - [ ] `team-contract.md` (draft)
 - [ ] `team-problem-statement.md` (decision made)
 - [ ] `team-icp.md` (draft)
@@ -107,9 +107,6 @@ All files go in your team repo under `/00-foundation/` and `/01-discovery/`:
 
 **Quality and finalization assessed in Week 4 deliverables.**] `interview-script-v1.md` (draft)
 
-### Due by Friday Next Week (Finalized):
-- [ ] All above files revised and finalized
-- [ ] First 3 interviews scheduled (proof in tracking doc)
 
 ## Getting Started
 
