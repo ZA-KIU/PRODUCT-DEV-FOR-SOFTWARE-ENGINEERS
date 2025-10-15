@@ -92,4 +92,113 @@
 ## Outreach Templates
 
 ### Template 1: Discord/Slack
+Hey everyone!
+
+I'm [Name], a [year] CS student working on a project about [problem area].
+
+I'm looking to chat with [ICP description] for about 20–25 minutes to understand [specific aspect].
+
+If that's you, or you know someone, DM me!
+
+Thanks!
+
+
+**Results:** [X responses, X scheduled]
+
+### Template 2: Direct Message
+
+
+
+Hi [Name]!
+
+I saw [relevant context]. I'm exploring [problem area] and would love to learn about your experience.
+
+Would you have 20–25 minutes this week? I'm flexible on timing.
+
+This is research for my product development class—not a pitch.
+
+Let me know!
+Thanks,
+[Your name]
+
+
+**Results:** [X responses, X scheduled]
+
+---
+
+## Referral Tracking
+
+| Referred By | Referral Contact | Relationship | Date Reached Out | Status | Notes |
+|-----------:|:---------------:|:-----------:|:-----------------:|:------:|:-----|
+| Interview #001 | Student‑H | Classmate | 2025‑10‑18 | Scheduled | 10/21 |
+| Interview #002 | Student‑I | Study group | 2025‑10‑19 | Pending | Send message |
+|               |             |            |               |         |             |
+
+---
+
+## Weekly Goals
+
+### Week 3 (Oct 17–24)
+
+- [ ] Complete three to five interviews
+- [ ] Document all within 24 hours
+- [ ] Schedule five or more for Week 4
+- [ ] Test three outreach channels
+
+**Progress:** Interviews: [X], Scheduled: [X], Channels: [X]
+
+### Week 4 (Oct 24–31)
+
+- [ ] Complete five to seven more (reach ten or more total)
+- [ ] Finalise all documentation
+- [ ] Begin synthesis preparation
+
+---
+
+## Challenges & Solutions
+
+### Challenge 1: [Example – Low response rate]
+
+**Impact:** [How this affects timeline]  
+**Solution:** [What you’re doing]  
+**Result:** [Did it work?]
+
+### Challenge 2: [Example – Cancellations]
+
+**Impact:** [Effect]  
+**Solution:** [Action]  
+**Result:** [Outcome]
+
+---
+
+## Interview Checklist
+
+**Before Each Interview:**
+
+- [ ] Confirm 24–48 hours before
+- [ ] Review script
+- [ ] Prepare recording device
+- [ ] Review ICP
+
+**During Interview:**
+
+- [ ] Get permission to record
+- [ ] Verify ICP match
+- [ ] Ask about past behaviour
+- [ ] Use Five Whys
+- [ ] Capture verbatim quotes
+- [ ] Ask for two or more referrals
+
+**After Interview:**
+
+- [ ] Document within 24 hours
+- [ ] Update tracker
+- [ ] Share insights with team
+- [ ] Follow up on referrals
+- [ ] Update patterns document
+
+---
+
+**Maintained By:** [Team member]  
+**Update Frequency:** After every interview/outreach
 
