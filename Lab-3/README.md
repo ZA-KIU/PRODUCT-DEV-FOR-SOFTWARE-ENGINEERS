@@ -59,6 +59,7 @@ your‑team‑repo/
 ├── pattern‑observations.md
 └── problem‑statement‑review.md
 
+
 ## Deliverables Checklist
 
 ### Must Complete Today
