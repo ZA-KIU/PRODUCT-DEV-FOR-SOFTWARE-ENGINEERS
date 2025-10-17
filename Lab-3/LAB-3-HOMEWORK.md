@@ -45,12 +45,8 @@ Interview logs must be completed within 24 hours of each interview and should b
 * Must include all scheduled interviews (completed and upcoming), contact method, date of outreach, interview date, status, team member responsible, and notes.
 * Track progress toward at least ten interviews by Week 5.
 
-### 3. Pattern Observations (required)
 
-* Location: `/01-discovery/working-notes/pattern-observations.md`
-* Record at least five patterns across your interviews. Each pattern should cite specific interviews, provide evidence, and note its implications and any questions raised.
-
-### 4. Problem Statement Review (required)
+### 3. Problem Statement Review (required)
 
 * Location: `/01-discovery/working-notes/problem-statement-review.md`
 * Include your original problem statement and key findings from interviews.
@@ -60,7 +56,7 @@ Interview logs must be completed within 24 hours of each interview and should b
 * If you refine or pivot, provide a revised statement.
 * Assess your confidence level and note open questions and next steps.
 
-### 5. Updated README (required)
+### 4. Updated README (required)
 
 * Location: `/README.md`
 * Update with current project status, interview progress (e.g., 3/10 completed), key learnings, problem statement status, and next steps.
@@ -96,7 +92,7 @@ git push origin lab-3-submission
 
 *0–1 points:* Zero to one interviews or complete non‑compliance with interview principles.
 
-**Documentation Quality (4 points)**
+**Documentation Quality (5 points)**
 
 *4 points:* All templates used correctly and fully; rich verbatim quotes; clear narrative; insights and surprises documented; professional and organised.
 
@@ -106,7 +102,7 @@ git push origin lab-3-submission
 
 *0 points:* No documentation.
 
-**Problem Statement Review Quality (3 points)**
+**Problem Statement Review Quality (4 points)**
 
 *3 points:* Critical assessment; specific evidence; well‑reasoned decision; acknowledges validation and challenges; no confirmation bias; identifies open questions; adjusts interview strategy accordingly.
 
@@ -116,13 +112,6 @@ git push origin lab-3-submission
 
 *0 points:* Not submitted or completely lacking critical thinking.
 
-**Pattern Recognition and Synthesis (2 points)**
-
-*2 points:* At least five patterns identified; patterns cite specific interviews; clear synthesis; preliminary themes emerging; analytical thinking evident.
-
-*1 point:* Three to four patterns; some evidence; basic recognition.
-
-*0 points:* Fewer than three patterns or no evidence.
 
 ### Bonus Points
 
