@@ -48,6 +48,59 @@ This folder contains all templates needed for Lab 4: Synthesis & Problem Validat
 - Top 3 validated patterns identification
 - Product direction implications
 
+- ### 🎨 Digital Alternative: Using Miro https://miro.com/app/board/uXjVJ1DMmxI=/?share_link_id=591959934055
+ 
+**If using Miro Affinity Diagram:**
+
+1. Access Lab 4 Miro board: [INSERT LINK]
+2. Find your team's section (Team 1-6)
+3. Follow same process: Extract → Cluster → Label
+4. Export board as PNG when complete (300 DPI)
+5. Use affinity-map-template-MIRO.md for documentation
+
+**Miro Benefits:**
+- Real-time collaboration
+- Easy reorganization
+- Copy-paste notes (no retyping!)
+- Permanent board access
+- Built-in export features
+
+**Export Instructions:**
+- Frame menu → Export → PNG → High resolution
+- Save as: affinity-map-photo.png
+- Upload to /01-discovery/synthesis/
+```
+
+#### **Physical Sticky Notes:**
+1. Create physical notes
+2. Group on wall/table
+3. Take photo with phone/camera
+4. **Manually retype** notes into markdown ❌ Time-consuming
+
+#### **Miro Affinity Diagram:**
+1. Create digital notes in Miro
+2. Group in digital workspace
+3. Export PNG from Miro (high-res)
+4. **Copy-paste** notes from Miro to markdown ✅ Much faster!
+
+---
+
+### **📋 FILE DELIVERABLES COMPARISON:**
+
+#### **Physical Version:**
+```
+/01-discovery/synthesis/
+├── affinity-map.md
+└── affinity-map-photo.jpg  ← Phone photo
+```
+
+#### **Miro Version:**
+```
+/01-discovery/synthesis/
+├── affinity-map.md  ← Uses MIRO template
+├── affinity-map-photo.png  ← Miro export (high-res)
+└── affinity-map-miro.pdf  ← Optional full board backup
+
 ---
 
 ### 4. `final-problem-statement-template.md`
