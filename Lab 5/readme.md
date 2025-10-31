@@ -433,8 +433,7 @@ Before submitting, verify:
 - Instructor will come to your team
 
 ### After Lab:
-- **Office Hours:** Tuesdays & Thursdays 2-4 PM, K-305
-- **Slack:** #lab-5-questions
+- **Office Hours:** Thursdays 1-3 PM
 - **Email:** zeshan.ahmad@kiu.edu.ge
 
 ### What to Bring to Office Hours:
