@@ -12,7 +12,7 @@
 By the end of this lab, your team will:
 
 1. ✅ Transform interview insights into **user stories** with acceptance criteria
-2. ✅ Create a comprehensive **Product Requirements Document (PRD)**
+2. ✅ Create a comprehensive **Product Requirements Document (PRD)** using the PRD Generator prompt in the Guides folder
 3. ✅ Define **MVP scope** using evidence-based prioritization
 4. ✅ Build a **product roadmap** for the next 8 weeks (3 sprints)
 5. ✅ Complete **Sprint 1 planning** with specific tasks and assignments
