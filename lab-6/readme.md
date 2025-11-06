@@ -2,7 +2,7 @@
 ## Bridging Customer Insights to Sprint Planning
 
 **Duration:** 120 minutes (2 hours)  
-**Week:** 6 (Friday Lab Session)  
+**Week:** 6 Friday November 7th, 2025
 **Phase:** Transition from "Define" to "Develop"
 
 ---
