@@ -465,10 +465,8 @@ Set up your development infrastructure and ensure everyone is unblocked for Spri
 - Use synthesis findings as your north star
 
 ### After Lab
-- **Office Hours:** Tuesday & Thursday 2-4 PM, Room K-305
-- **Slack:** `#lab-6-questions` for general questions
 - **Email:** zeshan.ahmad@kiu.edu.ge (urgent blockers only)
-- **Peer Support:** Reach out to other teams on Slack
+- **Peer Support:** Reach out to other teams
 
 ### Common Questions
 
@@ -486,7 +484,7 @@ A: Use the Value vs Effort matrix objectively. If still deadlocked, program mana
 
 ---
 
-## 🎯 Next Week Preview
+## 🎯 Preview
 
 ### Week 7 Lecture: Agile Fundamentals & Scrum
 - Scrum roles (Product Owner, Scrum Master, Dev Team)
