@@ -447,7 +447,7 @@ Set up your development infrastructure and ensure everyone is unblocked for Spri
 - `example-user-stories.md` - Good and bad examples
 - `example-prd.md` - Sample PRD for a study room finder
 - `example-mvp-definition.md` - Well-justified MVP scope
-- `example-sprint-plan.md` - Detailed sprint plan with tasks
+- `example-sprint-planning.md` - Detailed sprint plan with tasks
 
 ### Reading (Optional but Recommended)
 - "User Stories Applied" by Mike Cohn - Chapter 1
