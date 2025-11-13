@@ -58,7 +58,15 @@ This lab bridges **hypothesis-driven development** with **technical implementati
 ### Activity: Create Folder Structure
 
 Navigate to your team repository and create the following structure:
-
+/03-build/
+  /architecture/
+    - system-design.md (Template 1)
+    - tech-stack.md (Template 2)
+    - risk-spikes.md (Template 3)
+  /experiments/
+    - hypothesis.md (Template 4)
+    - experiment-plan.md (Template 5)
+    - experiment-results.md (Template 6)
 ```bash
 cd product-capstone-2025
 
