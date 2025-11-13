@@ -1,480 +1,651 @@
-# Lab 7: Hypothesis-Driven Experimentation Workshop
+# Lab 7: Architecture Planning + Experiment Design Workshop
 
 **Duration:** 120 minutes (2 hours)  
 **Week:** 8  
-**Due Date:** Experiment plan and refined hypothesis due by end of lab. First experiment must be LIVE by next Sunday.
-
-## 🎯 Lab Overview
-
-After planning your roadmap in Lab 6, this lab teaches you to **TEST assumptions before building**. You'll learn to design experiments that validate (or invalidate) your riskiest assumptions using the hypothesis-driven development framework.
-
-**By the end of this lab, you will:**
-1. ✅ Transform vague assumptions into testable hypotheses
-2. ✅ Design 2-3 experiments using the experiment spectrum (smoke tests → MVP)
-3. ✅ Build a simple landing page or fake door test (no coding your actual product!)
-4. ✅ Create a detailed experiment launch plan with success metrics
-
-## 📋 Prerequisites
-
-**Bring to Lab:**
-- [ ] Your product roadmap from Lab 6 (`/03-build/roadmap/`)
-- [ ] The risky assumption you identified in the Week 8 lecture exercise
-- [ ] Your team's problem statement and ICP
-- [ ] Laptop with internet access
-- [ ] Access to your GitHub repo
-
-**Review Before Lab:**
-- Week 8 lecture slides (Hypothesis-Driven Development)
-- The Airbnb photo hypothesis case study
-- Buffer's MVP validation example
+**Phase:** Transition from Discovery to Build
 
 ---
 
-## 🗓️ Lab Structure
+## Overview
 
-| Time | Activity | Output |
-|------|----------|--------|
-| **0:00-0:30** | Part 1: Hypothesis Refinement | `hypothesis.md` |
-| **0:30-1:10** | Part 2: Experiment Design Workshop | `experiment-plan.md` |
-| **1:10-1:40** | Part 3: Landing Page/Smoke Test Build | Live page or fake door |
-| **1:40-2:00** | Part 4: Launch Plan & Team Shareout | `launch-plan.md` |
+This lab bridges **hypothesis-driven development** with **technical implementation**. You'll plan your system architecture AND design experiments to validate your MVP assumptions.
+
+**By the end of this lab, you will have:**
+1. ✅ Complete system architecture plan
+2. ✅ Tech stack decisions documented
+3. ✅ Risk spikes identified and planned
+4. ✅ Refined product hypothesis
+5. ✅ 2-3 designed experiments
+6. ✅ One experiment launched (landing page or smoke test)
 
 ---
 
-## 📚 Part 1: Hypothesis Refinement (30 min)
+## Pre-Lab Requirements
 
-### Step 1: Review Your Risky Assumption (5 min)
+**Before arriving at lab, you must have:**
 
-Look at the assumption you identified during the Week 8 lecture's 2-minute exercise.
+- [ ] Last week's sprint plan (from Lab 6)
+- [ ] Team problem statement and ICP
+- [ ] Rough idea of MVP scope (from PRD)
+- [ ] Laptop with:
+  - GitHub access
+  - Drawing tool installed (Excalidraw, draw.io, or paper + phone camera)
+  - Internet connection for deployment
 
-**Common vague assumptions:**
-- ❌ "Students will use our app"
-- ❌ "People want this feature"
-- ❌ "Users will pay for this"
+**Bring:**
+- Your MVP feature list
+- Any technical questions or concerns
+- Your team's risky assumptions (from Week 8 lecture exercise)
 
-### Step 2: Use the Hypothesis Template (15 min)
+---
 
-📝 **Complete:** [`templates/hypothesis-template.md`](./templates/hypothesis-template.md)
+## Lab Structure
 
-**The Formula:**
-```
-We believe [doing X] for [target user] will result in [measurable outcome] 
-because [assumption about user behavior].
-```
-
-**Example from StudySpot:**
-```
-We believe showing library occupancy % for KIU CS students will result in 
-30+ signups opening the app 3+ times/week because students currently waste 
-15 min/day finding study spots and want real-time info.
-```
-
-**Make it pass the tests:**
-- ✅ **Specific user:** Not "students" — "KIU commuter students in years 2-3"
-- ✅ **Measurable outcome:** Not "engagement" — "50+ email signups in 1 week"
-- ✅ **Testable timeframe:** "Within 1 week" not "eventually"
-- ✅ **Clear assumption:** Why you think this will work
-
-### Step 3: Identify Hypothesis Type (5 min)
-
-Which type is your hypothesis?
-
-| Type | Question | Example Test |
+| Time | Activity | Deliverables |
 |------|----------|--------------|
-| 🔍 **Problem** | Is the problem real and painful? | Interviews, time-tracking study |
-| 💡 **Solution** | Will this solution solve the problem? | Prototype testing, fake door |
-| 💰 **Value** | Will users pay or adopt this? | Landing page, pricing page |
-| 📈 **Growth** | Will users tell others or come back? | Referral tracking, usage analytics |
-
-**Your hypothesis is likely a ___________ hypothesis.**
-
-### Step 4: Team Review (5 min)
-
-Read your hypothesis aloud to your team.
-
-**Good Hypothesis Checklist:**
-- [ ] Does it have a specific user segment?
-- [ ] Is the outcome measurable?
-- [ ] Is it testable in 1-2 weeks?
-- [ ] Is the assumption clear?
-
-**If NO to any:** Revise now before moving forward.
+| **0:00-0:10** | Review & Setup | Folder structure created |
+| **0:10-0:30** | System Architecture Design | Architecture diagram |
+| **0:30-0:45** | Tech Stack Selection | `tech-stack.md` |
+| **0:45-1:00** | Risk Spike Planning | `risk-spikes.md` |
+| **1:00-1:15** | Hypothesis Refinement | `hypothesis.md` |
+| **1:15-1:45** | Experiment Design | `experiment-plan.md` |
+| **1:45-2:00** | Landing Page Setup & Deploy | Live URL |
 
 ---
 
-## 🧪 Part 2: Experiment Design Workshop (40 min)
+## Part 1: Review & Setup (10 minutes)
 
-### Step 1: Choose Experiment Type(s) (10 min)
+### Activity: Create Folder Structure
 
-Review the **Experiment Spectrum** from lecture:
+Navigate to your team repository and create the following structure:
 
-```
-Lowest Fidelity ←──────────────────────────────→ Highest Fidelity
-└── Preotype ──┴── Smoke Test ──┴── Wizard of Oz ──┴── MVP ──┘
-```
+```bash
+cd product-capstone-2025
 
-**For Week 8-9, focus on Smoke Tests:**
+# Create folders
+mkdir -p 03-build/architecture
+mkdir -p 03-build/experiments
+mkdir -p 03-build/src
 
-| Type | What It Is | Use When | Build Time |
-|------|------------|----------|------------|
-| **Fake Door Test** | Button/link for feature that doesn't exist yet | Testing interest/demand | 1 day |
-| **Landing Page** | Single page describing product + email signup | Testing value prop | 1-3 days |
-| **Concierge MVP** | Manually deliver service to early users | Testing solution fit | 1 week |
-| **Wizard of Oz** | Users think it's automated, but humans do the work | Testing core workflow | 1-2 weeks |
+# Navigate to architecture folder
+cd 03-build/architecture
 
-📝 **Document:** Choose 2-3 experiment types in [`templates/experiment-plan-template.md`](./templates/experiment-plan-template.md)
+# Create template files
+touch system-design.md
+touch tech-stack.md
+touch risk-spikes.md
 
-**Example Decision:**
-> "We'll create a landing page (Test 1) to validate demand, then a fake door test (Test 2) 
-> in our prototype to see which feature students click most."
+# Navigate to experiments folder
+cd ../experiments
+touch hypothesis.md
+touch experiment-plan.md
+touch experiment-results.md
 
-### Step 2: Define Success Metrics (15 min)
-
-For EACH experiment, define:
-
-**Using SMART Criteria:**
-
-| Letter | Meaning | Bad Example | Good Example |
-|--------|---------|-------------|--------------|
-| **S** | Specific | "signups" | "email signups" |
-| **M** | Measurable | "good engagement" | "50+ signups" |
-| **A** | Actionable | "pageviews" | "signup → activation rate" |
-| **R** | Relevant | "clicks" | "completed tasks" |
-| **T** | Time-bound | "eventually" | "in 1 week (Nov 19-20)" |
-
-**Success vs. Failure Criteria:**
-
-For each experiment, define:
-- ✅ **Success threshold:** "If 50+ students sign up, build it. 15% considered validated."
-- ❌ **Failure threshold:** "If <10 signups in 1 week, not enough demand."
-- 🤔 **Learn threshold:** "10-49 signups = interview signups to understand why."
-
-📝 **Document:** Complete metrics section of [`templates/experiment-plan-template.md`](./templates/experiment-plan-template.md)
-
-### Step 3: Identify What You'll Learn (10 min)
-
-For each experiment, write:
-
-**If validated (hypothesis proven):**
-- What will you do next?
-- What will you build?
-
-**If invalidated (hypothesis disproven):**
-- What did you learn?
-- How will you pivot?
-
-**Example:**
-```
-If validated: Build MVP starting with real-time occupancy display
-If invalidated: Interview signups to understand why they signed up but didn't engage
+# Commit structure
+git add .
+git commit -m "Add Week 8 architecture and experiments structure"
+git push
 ```
 
-### Step 4: Set Timeline (5 min)
-
-**This week (Nov 13-20):**
-- Design experiment: ___ hours
-- Build landing page/test: ___ hours  
-- Launch experiment: By ___ (date)
-- Run experiment: ___ days
-- Analyze results: By ___ (date)
-
-⚠️ **Critical:** You must RUN at least ONE experiment for 3+ days minimum by next Sunday.
+**Verify:** You should now have `/03-build/architecture/` and `/03-build/experiments/` folders in your repository.
 
 ---
 
-## 🎨 Part 3: Landing Page/Smoke Test Build (30 min)
+## Part 2: System Architecture Design (20 minutes)
 
-### Choose Your Tool
+### Activity: Draw Your System Architecture
 
-Pick ONE based on your experiment type:
+**Step 1: Map User Actions (5 minutes)**
 
-| Tool | Best For | Time | Difficulty |
-|------|----------|------|------------|
-| **[Carrd.co](https://carrd.co)** | Simple landing pages | 20 min | ⭐ Easy |
-| **[Notion](https://notion.so)** | Content-heavy pages | 30 min | ⭐ Easy |
-| **[Google Sites](https://sites.google.com)** | Quick team pages | 20 min | ⭐ Easy |
-| **[Typeform](https://typeform.com)** | Surveys with signup | 15 min | ⭐ Easy |
-| **[Google Forms](https://forms.google.com)** | Simple signups | 10 min | ⭐ Very Easy |
+As a team, write down the **core user flow** for your MVP:
 
-### Landing Page Requirements
+**Example (StudySpot):**
+1. Student opens app
+2. Views map of study locations
+3. Sees real-time occupancy
+4. Selects location
+5. Books time slot
+6. Receives confirmation
 
-Your page MUST include:
-
-1. **Clear headline:** What problem does it solve? (10 words max)
-2. **Value proposition:** Why should they care? (1-2 sentences)
-3. **Target user:** Who is this for? (Be specific!)
-4. **Call-to-action:** Email signup, waitlist, or fake button
-5. **Visual:** Screenshot, mockup, or simple diagram
-
-### Fake Door Test Requirements
-
-If building a fake door in your existing prototype:
-
-1. **Clickable element:** Button or link for non-existent feature
-2. **Interest capture:** "Coming soon! Enter email for early access"
-3. **Thank you message:** "Thanks! We'll notify you when it's ready."
-4. **Click tracking:** Log which features get clicked (use Google Analytics or simple counter)
-
-### Build Time: 25 minutes
-
-Work together or split up:
-- Designer: Creates page layout and copy
-- Developer: Sets up form and tracking
-- PM: Writes compelling copy
-
-### Test Your Page (5 min)
-
-Before launching:
-- [ ] Submit a test signup
-- [ ] Check if you received the email/logged the data
-- [ ] Test on mobile (50%+ of traffic will be mobile)
-- [ ] Share link with team to verify
-
-📝 **Document:** Save link in [`templates/landing-page-link.md`](./templates/landing-page-link.md)
+**Your Turn:** Write your core user flow (3-6 steps)
 
 ---
 
-## 🚀 Part 4: Launch Plan & Team Shareout (20 min)
+**Step 2: Identify Components (7 minutes)**
 
-### Step 1: Write Launch Plan (10 min)
-
-📝 **Complete:** [`templates/launch-plan-template.md`](./templates/launch-plan-template.md)
-
-**Your plan must answer:**
-
-**WHO will you target?**
-- [ ] Specific user segment (from your ICP)
-- [ ] How many people can you reach?
-- [ ] Where do they hang out online/offline?
-
-**WHERE will you promote?**
-- [ ] Facebook groups
-- [ ] WhatsApp groups
-- [ ] Instagram stories
-- [ ] TikTok
-- [ ] Physical flyers
-- [ ] Class announcements
-- [ ] Other: _______
-
-**WHEN will you launch?**
-- [ ] Launch date: ___________
-- [ ] Run duration: ___ days (minimum 3 days)
-- [ ] Check-in schedule: Daily at ___ PM
-
-**HOW will you measure?**
-- [ ] Tool: Google Forms / Typeform / Analytics
-- [ ] Metrics tracked: ____________
-- [ ] Dashboard link: ____________
-- [ ] Daily log: ________________
-
-**WHAT will you do with results?**
-- [ ] If validated: ____________
-- [ ] If invalidated: ___________
-- [ ] If inconclusive: __________
-
-### Step 2: Team Shareout (10 min)
-
-Each team presents (2 minutes max):
+For each step in the user flow, identify what technical components are needed:
 
 **Template:**
-> "We're testing the hypothesis that [hypothesis]. We're running a [experiment type] 
-> targeting [specific users]. Success looks like [metric]. We'll launch [when] and 
-> analyze results by [date]."
+| User Action | Frontend Needs | Backend Needs | Database Needs |
+|-------------|----------------|---------------|----------------|
+| Views map | Map component | Location data API | Locations table |
+| Sees occupancy | Real-time display | Occupancy calculator | Bookings table |
 
-**Class gives feedback:**
-- ✅ Is the hypothesis testable?
-- ✅ Is the metric specific enough?
-- ✅ Is 1 week realistic for this experiment?
+**Your Turn:** Fill this out for your core user flow
 
 ---
 
-## 📦 Deliverables
+**Step 3: Draw Architecture Diagram (8 minutes)**
 
-### Due by End of Lab (Today):
+Using Excalidraw, draw.io, Miro, or paper, create a diagram showing:
 
-Create folder `/03-build/experiments/` in your repo:
+1. **Frontend** (what users see)
+2. **Backend** (your server logic)
+3. **Database** (data storage)
+4. **External APIs** (third-party services)
+5. **Arrows showing data flow**
 
+**Minimum Requirements:**
+- Clearly labeled boxes for each component
+- Arrows showing direction of data flow
+- Labels on arrows (e.g., "HTTP API call", "SQL query", "WebSocket")
+
+**Example Structure:**
 ```
-/03-build/experiments/
-├── hypothesis.md                  # Your refined hypothesis
-├── experiment-plan.md              # 2-3 experiments designed
-├── landing-page-link.md            # Link to your live page/test
-└── launch-plan.md                  # Who, what, when, where, how
-```
+[Frontend: React]
+    ↓ (API calls)
+[Backend: Node.js + Express]
+    ↓ (SQL queries)
+[Database: PostgreSQL]
 
-**Commit and push to GitHub before leaving lab.**
-
-### Due by Next Sunday (Week 9):
-
-- [ ] **Launch** at least ONE experiment
-- [ ] **Run** experiment for minimum 3 days
-- [ ] **Track** metrics daily in [`experiment-results.md`](./templates/experiment-results-template.md)
-- [ ] **Document** learnings (even if failed!)
-
-**Where to put results:**
-```
-/03-build/experiments/
-├── [PREVIOUS FILES]
-└── experiment-results.md           # Daily tracking + final analysis
+External:
+- Google Maps API
+- Firebase Auth
 ```
 
 ---
 
-## ✅ Success Criteria
+**Step 4: Document in `system-design.md`**
 
-**You've succeeded if:**
-- [ ] Your hypothesis is testable and specific
-- [ ] You can measure success in 1 week
-- [ ] Your landing page/test is live and accessible
-- [ ] You know exactly who you're targeting and where to find them
-- [ ] You have clear success/failure thresholds defined
-- [ ] You commit to checking metrics DAILY
+Copy the template from `/labs/lab-7/templates/system-design-template.md` to your `03-build/architecture/` folder and fill it out.
 
-**Red flags:**
-- ❌ Hypothesis uses vague words like "users" or "engagement"
-- ❌ No specific metric or success threshold
-- ❌ Planning to build actual MVP features (that's NOT an experiment!)
-- ❌ No plan for where to find target users
-- ❌ Timeline is >2 weeks
+**Required sections:**
+1. High-level architecture diagram (image or ASCII art)
+2. Component descriptions
+3. Data flow explanation
+4. Key design decisions
+
+**Time:** Remaining 3-5 minutes of this section
 
 ---
 
-## 🧰 Resources
+## Part 3: Tech Stack Selection (15 minutes)
 
-### Required Reading (Do BEFORE next lab):
-- **[The Lean Startup, Chapter 6: Test](https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898)** - Eric Ries
-- **[Hypothesis-Driven Development](https://www.thoughtworks.com/en-us/insights/articles/how-to-implement-hypothesis-driven-development)** - Barry O'Reilly
+### Activity: Choose and Document Your Technologies
 
-### Helpful Tools:
-- **Landing Pages:** [Carrd.co](https://carrd.co), [Notion](https://notion.so), [Google Sites](https://sites.google.com)
-- **Surveys:** [Typeform](https://typeform.com), [Google Forms](https://forms.google.com)
-- **Analytics:** [Google Analytics](https://analytics.google.com), [Plausible](https://plausible.io)
-- **Fake Product Pages:** [Notion](https://notion.so), [Canva](https://canva.com)
+**Step 1: Team Discussion (10 minutes)**
 
-### GitHub Repo:
-- Week 8 templates in `/labs/lab-7/templates/`
-- Example experiments in `/examples/experiments/`
-- Hypothesis tracking spreadsheet
+Answer these questions as a team:
+
+**Frontend:**
+- What do you know? (React, Vue, vanilla JavaScript, etc.)
+- What does your MVP need? (complex interactions vs. simple pages)
+- Decision: _________________
+
+**Backend:**
+- What do you know? (Node.js, Python/Flask, Ruby/Rails, etc.)
+- What does your MVP need? (real-time updates, complex logic, simple API, etc.)
+- Decision: _________________
+
+**Database:**
+- What kind of data? (relational vs. documents)
+- What scale? (hundreds vs. millions of records)
+- Decision: _________________
+
+**Deployment:**
+- Where will you host? (Vercel, Heroku, AWS, Railway, etc.)
+- Continuous deployment or manual?
+- Decision: _________________
+
+**Key Libraries/Frameworks:**
+- Authentication: _________________
+- Maps/Location: _________________
+- Styling: _________________
+- Other: _________________
 
 ---
 
-## 🏠 Homework (Due Next Sunday Before Week 9)
+**Step 2: Document in `tech-stack.md` (5 minutes)**
 
-### 1. Launch Your Experiment (Required)
+Copy the template from `/labs/lab-7/templates/tech-stack-template.md` and fill it out.
 
-**Minimum requirements:**
-- [ ] Live for 3+ days
-- [ ] Reach 30+ people from target segment
-- [ ] Track signups/clicks daily
-- [ ] Document in `experiment-results.md`
+**For EACH technology, include:**
+1. **What** you chose
+2. **Why** you chose it
+3. **Alternative considered**
+4. **Risk/Trade-off**
 
-**Promotional requirements:**
-- [ ] Post in 2+ relevant channels (groups/forums/social)
-- [ ] Include screenshots of posts in `/experiments/promotion/`
-- [ ] Track source of signups (where did they come from?)
-
-### 2. Track Metrics Daily (Required)
-
-Create `experiment-results.md` with:
-
-**Daily Log Format:**
+**Example:**
 ```markdown
-## Day 1 (Nov 19)
-- Signups: 12
-- Landing page visits: 87
-- Conversion rate: 13.8%
-- Top traffic source: CS Facebook group
-- Observations: Most signups came after class time (2-5pm)
+### Frontend: React
 
-## Day 2 (Nov 20)
-...
+**Why:**
+- Team knows React from previous coursework
+- Large ecosystem of libraries
+- Good documentation and community support
+
+**Alternative Considered:**
+Vue.js - simpler learning curve but team less familiar
+
+**Risk:**
+React learning curve for state management. Mitigation: Use simple state, add Redux only if needed.
 ```
 
-### 3. Read & Reflect (Required)
+---
 
-**Read:**
-- The Lean Startup, Chapter 6: Test (30 pages)
+## Part 4: Risk Spike Planning (15 minutes)
 
-**Write:** 
-- 200-word reflection in `experiment-results.md`:
-  - What surprised you about running the experiment?
-  - How did users respond differently than expected?
-  - Would you run this experiment differently next time?
+### Activity: Identify and Plan Technical Spikes
 
-### 4. Optional: Run Second Experiment
+**Step 1: List Technical Uncertainties (5 minutes)**
 
-If your first experiment completes early, run a second one!
+What don't you know how to build yet? List everything your team is uncertain about:
+
+**Examples:**
+- "Can we get real-time data from the library system?"
+- "Can we integrate Google Maps without exceeding free tier?"
+- "Can we deploy a Python backend on Vercel?"
+- "Can we scrape data from the university website?"
+
+**Your Turn:** List 3-5 technical uncertainties
 
 ---
 
-## 📊 Grading Rubric (Lab 7 = 10 points)
+**Step 2: Prioritize by Risk (3 minutes)**
 
-| Component | Points | Criteria |
-|-----------|--------|----------|
-| **Hypothesis Quality** | 2 pts | Specific, measurable, testable, clear assumption |
-| **Experiment Design** | 2 pts | Appropriate type, clear metrics, realistic timeline |
-| **Landing Page/Test** | 2 pts | Live, functional, tracks metrics, professional |
-| **Launch Plan** | 2 pts | Specific targets, promotion plan, measurement plan |
-| **Execution** | 2 pts | Launched by deadline, ran 3+ days, tracked daily |
+For each uncertainty, rate:
+- **Impact if it fails:** High / Medium / Low
+- **Likelihood of failure:** High / Medium / Low
 
-**Bonus points (up to +2):**
-- Run multiple experiments (+1)
-- Achieve statistical significance (+1)
-- Creative experiment design (+0.5)
-- Exceptional documentation (+0.5)
+**Formula:** Risk = Impact × Likelihood
+
+Prioritize the HIGH RISK items (high impact + high likelihood of failure)
 
 ---
 
-## ❓ Common Questions
+**Step 3: Design Risk Spikes (7 minutes)**
 
-**Q: Can we test multiple features at once?**  
-A: No! Test ONE variable at a time. Multiple tests = can't tell which variable caused the result.
+For your top 2-3 risks, design a spike:
 
-**Q: What if nobody signs up for our experiment?**  
-A: That's valuable data! Document why you think it failed and what you learned. Failure is not bad—building the wrong thing is bad.
+**Template:**
+```markdown
+### Spike #1: [Name of uncertainty]
 
-**Q: Can we use our existing prototype as the "landing page"?**  
-A: Only if you're doing a fake door test. Otherwise, keep experiments SEPARATE from your MVP build.
+**Risk:** What could go wrong?
 
-**Q: How many people do we need to reach statistical significance?**  
-A: For a landing page, aim for 30+ signups minimum. For click rates, 100+ visits minimum. Document sample size in your plan.
+**Hypothesis:** "If we can [do X], then we can proceed with [building Y]"
 
-**Q: What if we can't find enough people in our target segment?**  
-A: This might indicate your ICP is too narrow or your distribution strategy needs work. Discuss with instructor ASAP.
+**Experiment:**
+- Time-box: 2-3 hours
+- What you'll build: Minimal proof-of-concept
+- Success criteria: Specific measurable outcome
 
----
+**If it succeeds:** How does this change your plan?
+**If it fails:** What's your backup plan?
 
-## 🎯 What's Next
+**Owner:** Who will run this spike?
+**Deadline:** When by?
+```
 
-**Week 9 (Next Week):**
-- **Lecture:** Midterm Exam (NO LECTURE)
-- **Lab 8:** Experiment Analysis & Pivot Workshop
-  - Analyze experiment results
-  - Decide: Build, pivot, or kill feature
-  - Update roadmap based on learnings
-  - Plan next experiments
-
-**Upcoming Deadlines:**
-- **Week 9 (Next Wednesday):** Midterm Exam covering Weeks 1-7
-- **Week 10:** Begin MVP development (based on validated hypotheses!)
+**Your Turn:** Document in `risk-spikes.md`
 
 ---
 
-## 💡 Remember
+## Part 5: Hypothesis Refinement (15 minutes)
 
-> **"You can't code your way out of a bad idea. Validate first, build second."**
+### Activity: Refine Your Product Hypothesis
 
-Experimentation is not extra work—it SAVES you weeks of wasted development time.
+**Step 1: Review Week 8 Hypothesis Template (3 minutes)**
 
-By next week, you should have at least ONE experiment running and collecting data. This data will inform what you actually build in Weeks 10-13.
+**Template:**
+> "We believe [doing X] for [target user] will result in [measurable outcome] because [assumption about user behavior]."
 
-**The best product teams spend 80% of their time learning, 20% building. Not the other way around.**
+**Must include:**
+- ✅ Specific action/feature
+- ✅ Specific user segment (ICP)
+- ✅ Measurable outcome with number
+- ✅ Clear assumption to test
 
 ---
 
-**Questions? Issues? Stuck?**
-- Post in #lab-7-help on Discord
-- Ask during lab time
-- Email: [your-email@kiu.edu.ge]
+**Step 2: Write Your Hypothesis (7 minutes)**
 
-**See you in Lab 8 next week with your experiment results! 🚀**
+Using the 2-minute exercise from lecture, refine your hypothesis with your team.
+
+**Example (StudySpot):**
+> "We believe showing real-time library occupancy % for KIU students will result in 30+ signups in Week 1 because students currently waste 15 min/day finding quiet spots and want real-time info."
+
+**Your Turn:** Write your hypothesis in `hypothesis.md`
+
+---
+
+**Step 3: Define Success Criteria (5 minutes)**
+
+For your hypothesis, specify:
+
+**Success Threshold:**
+- What number would validate your hypothesis?
+- Example: "50+ email signups in 1 week"
+
+**Failure Threshold:**
+- What number would invalidate it?
+- Example: "<10 signups in 1 week"
+
+**Gray Zone:**
+- What number would be inconclusive?
+- Example: "10-50 signups → need more data"
+
+**Time Frame:**
+- How long will you run the experiment?
+- Example: "1 week (Nov 19-26)"
+
+---
+
+## Part 6: Experiment Design (30 minutes)
+
+### Activity: Design 2-3 Experiments to Test Your Hypothesis
+
+**Step 1: Choose Experiment Types (10 minutes)**
+
+Review the Experiment Spectrum from lecture:
+
+**Level 1: Prototype** (fastest, lowest fidelity)
+- Paper sketches, Google Forms, Manual spreadsheet
+- Use when: Testing if problem exists
+
+**Level 2: Smoke Test** (1-3 days, low fidelity)
+- Landing page, Fake door test, Concierge service
+- Use when: Testing interest/demand
+
+**Level 3: Wizard of Oz** (1-2 weeks, medium fidelity)
+- Manual backend, Human-powered automation, No-code tools
+- Use when: Testing if solution works
+
+**Level 4: MVP** (4-8 weeks, medium-high fidelity)
+- Coded core feature, Basic automation, Real infrastructure
+- Use when: Testing product-market fit
+
+**Your Task:** Choose 2-3 experiments at different levels that build on each other
+
+**Example (StudySpot):**
+1. **Smoke Test:** Landing page with "Get real-time library occupancy updates"
+2. **Wizard of Oz:** Manual checking of library + texting students with updates
+3. **MVP:** Automated web scraping + real-time dashboard
+
+---
+
+**Step 2: Design Each Experiment (15 minutes)**
+
+For EACH experiment, document:
+
+**Template:**
+```markdown
+## Experiment #1: [Name]
+
+**Type:** Smoke Test / Wizard of Oz / MVP / etc.
+
+**Hypothesis Testing:**
+Which assumption does this test?
+
+**Setup:**
+- What you'll build (be specific)
+- Tools you'll use
+- Time to build
+
+**Metrics:**
+- Primary metric: [Example: email signups]
+- Secondary metrics: [Example: landing page visits, click-through rate]
+- How you'll track: [Example: Google Forms responses]
+
+**Success Criteria:**
+- Success: [Specific number]
+- Failure: [Specific number]
+
+**Timeline:**
+- Build: [X days]
+- Run: [X days]
+- Analyze: [X hours]
+
+**Budget:** $0 (must use free tools)
+
+**Next Steps:**
+- If succeeds: [What you'll build next]
+- If fails: [What you'll pivot to]
+```
+
+**Your Turn:** Fill this out for 2-3 experiments in `experiment-plan.md`
+
+---
+
+**Step 3: Prioritize and Commit (5 minutes)**
+
+As a team, decide:
+1. **Which experiment to launch TODAY:** (must be launchable in 30 minutes)
+2. **Which experiment to launch THIS WEEK:** (more complex, needs 2-3 days)
+3. **Which experiment for NEXT WEEK:** (if first two validate)
+
+**Document:** In `experiment-plan.md`, note which experiment you're starting with
+
+---
+
+## Part 7: Landing Page Setup & Deploy (15 minutes)
+
+### Activity: Build and Launch Your First Smoke Test
+
+**Objective:** Have a LIVE landing page by end of lab
+
+**Tool Options:**
+1. **Carrd.co** (recommended for beginners)
+   - Templates available
+   - Free tier includes 3 sites
+   - Custom domain optional
+
+2. **Notion** (good if you already use it)
+   - Create page + share publicly
+   - Add Google Form for signups
+
+3. **Google Sites** (free, simple)
+   - Easy drag-and-drop
+   - Integrate with Google Forms
+
+4. **HTML + GitHub Pages** (if you know HTML)
+   - Full control
+   - Free hosting
+
+---
+
+**Minimum Requirements for Landing Page:**
+
+**Must Include:**
+1. ✅ **Clear headline:** What problem are you solving?
+2. ✅ **Subheadline:** For whom? Why now?
+3. ✅ **Visual:** Screenshot, mockup, or illustration
+4. ✅ **Value proposition:** 3 key benefits
+5. ✅ **Call-to-action:** Email signup or "Join Waitlist" button
+6. ✅ **Social proof** (optional): "100+ KIU students interested"
+
+**Example Structure (StudySpot):**
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Never Waste Time Finding Study Spots Again
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+See real-time library occupancy at KIU
+Join 50+ students on the waitlist
+
+[Screenshot of mock dashboard]
+
+✓ Save 15+ min/day
+✓ Find quiet spots instantly
+✓ Plan ahead with occupancy predictions
+
+[Email signup form]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+---
+
+**Step-by-Step (Using Carrd):**
+
+1. Go to carrd.co
+2. Sign up (free)
+3. Choose "Start from Scratch" or pick template
+4. Add sections:
+   - Hero (headline + CTA)
+   - Features (3 benefits)
+   - Email form (link to Google Form)
+5. Publish (get URL)
+6. Test on mobile
+
+**Time:** 10-12 minutes to build, 2-3 minutes to deploy
+
+---
+
+**Before You Leave Lab:**
+
+1. **Get your landing page URL**
+2. **Share link in team Discord/Slack**
+3. **Add URL to `experiment-plan.md`**
+4. **Commit all files to GitHub**
+
+---
+
+## Deliverables Checklist
+
+By end of lab, your team must have committed to GitHub:
+
+### Architecture Documents (`/03-build/architecture/`):
+- [ ] `system-design.md` with architecture diagram
+- [ ] `tech-stack.md` with technology choices and rationale
+- [ ] `risk-spikes.md` with top 2-3 technical risks and spike plans
+
+### Experiment Documents (`/03-build/experiments/`):
+- [ ] `hypothesis.md` with refined, testable hypothesis
+- [ ] `experiment-plan.md` with 2-3 designed experiments
+- [ ] `experiment-results.md` (template for tracking data)
+
+### Live Deployment:
+- [ ] Landing page or smoke test deployed and accessible via URL
+- [ ] URL documented in `experiment-plan.md`
+
+---
+
+## Homework (Due by Sunday)
+
+### 1. Finalize Architecture (if not complete in lab)
+- Polish architecture diagram
+- Get feedback from another team or instructor
+- Update based on feedback
+
+### 2. Run Your Experiment
+- **Days 1-3:** Promote landing page (social media, class Discord, word of mouth)
+- **Track daily:** # of visits, # of signups, qualitative feedback
+- **Document:** Update `experiment-results.md` daily
+
+### 3. Execute Risk Spikes
+- **This week:** Complete at least ONE technical spike
+- **Document:** What you learned, what worked, what didn't
+- **Update:** `risk-spikes.md` with results
+
+### 4. Prepare for Midterm (Week 9)
+- Review Weeks 1-7 lecture slides
+- Review GitHub deliverables from Labs 1-6
+- Practice writing hypotheses
+- Study key frameworks (AARRR, 4 D's, Scrum)
+
+---
+
+## Troubleshooting
+
+### "We can't agree on tech stack"
+
+**Solution:**
+- Use the "Skills + Time + Requirements" framework
+- Vote if needed (simple majority)
+- Remember: No choice is perfect. Pick something and iterate.
+
+---
+
+### "We don't know how to draw an architecture diagram"
+
+**Solution:**
+- Start simple: 3 boxes (Frontend, Backend, Database)
+- Add arrows showing data flow
+- Label what each arrow does
+- Refine over time
+
+---
+
+### "We have 10 different technical risks"
+
+**Solution:**
+- That's normal! You won't eliminate all of them.
+- Focus on the top 2-3 HIGH IMPACT risks
+- De-risk those first, tackle others later
+
+---
+
+### "Our landing page looks ugly"
+
+**Solution:**
+- Ugly landing pages can still validate hypotheses
+- Focus on CLEAR messaging over aesthetics
+- You can polish it later if experiment succeeds
+
+---
+
+### "No one is signing up for our landing page"
+
+**Solution:**
+- Good data! This tells you something.
+- Analyze: Is the problem not painful enough? Or is your messaging unclear?
+- Pivot if needed. This is WHY we smoke test.
+
+---
+
+## Next Week
+
+**Week 9: MIDTERM EXAM**
+- No lecture
+- No lab
+- 2-hour comprehensive exam covering Weeks 1-7
+
+**After Midterm (Week 10):**
+- Sprint 1 kickoff
+- Start building based on validated architecture
+- Continue experiments and iterate based on data
+
+---
+
+## Resources
+
+**Architecture Design:**
+- Excalidraw: https://excalidraw.com
+- draw.io: https://app.diagrams.net
+- Miro: https://miro.com
+
+**Landing Pages:**
+- Carrd: https://carrd.co
+- Notion: https://notion.so
+- Google Sites: https://sites.google.com
+- Lovable / Bolt / Curser + IDE
+
+**Experiment Tracking:**
+- Google Forms: https://forms.google.com
+- Typeform: https://typeform.com
+- Tally: https://tally.so
+- Google Analytics
+
+**GitHub Templates:**
+All templates available in `/labs/lab-7/templates/`
+
+---
+
+If you need help with:
+- Architecture review
+- Tech stack decisions
+- Risk spike planning
+- Experiment design
+- Landing page creation
+Don't wait until homework is due to ask for help!
