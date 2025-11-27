@@ -475,6 +475,320 @@ After completing your validation experiments, you'll move into financial modelin
 
 Your validation learnings from Lab 8 will directly inform your financial assumptions in Lab 9.
 
+For Lab 8 here is your Submission Checklist:
+# Lab 8 Submission Checklist
+
+Use this to verify you've completed everything before submitting.
+
+---
+
+## ✅ Lab Participation (Due: End of Lab)
+
+### Required Files in Your Repo
+
+- [ ] `03-build/experiments/hypothesis-prioritization.md`
+- [ ] `03-build/experiments/experiment-plan.md`
+- [ ] `03-build/validation/success-metrics.md`
+- [ ] `03-build/validation/smoke-test-plan.md`
+- [ ] `03-build/validation/validation-sprint-plan.md`
+
+### Quality Checks
+
+**hypothesis-prioritization.md:**
+- [ ] 15+ assumptions listed
+- [ ] All assumptions scored (Impact & Confidence)
+- [ ] Risk scores calculated correctly
+- [ ] Top 3 riskiest identified
+- [ ] Full rationale for each top 3
+
+**experiment-plan.md:**
+- [ ] 3 complete experiments designed
+- [ ] Each has hypothesis statement
+- [ ] Each has success criteria with numbers
+- [ ] Each has test procedure (4 phases)
+- [ ] Timeline and resources documented
+- [ ] Potential outcomes mapped
+
+**success-metrics.md:**
+- [ ] North star metric defined
+- [ ] AARRR metrics specified
+- [ ] Targets set for each metric
+- [ ] Measurement plan documented
+
+**smoke-test-plan.md:**
+- [ ] Test type selected
+- [ ] Landing page content drafted
+- [ ] Success criteria defined (conversion rate threshold)
+- [ ] 3+ distribution channels planned
+- [ ] Timeline complete
+
+**validation-sprint-plan.md:**
+- [ ] 2-week plan with daily tasks
+- [ ] Owners assigned to each task
+- [ ] Success criteria defined
+- [ ] Risks identified
+
+### Git Commit
+
+- [ ] All files committed
+- [ ] Descriptive commit message
+- [ ] Pushed to GitHub
+- [ ] Verified files visible in GitHub web interface
+
+---
+
+## ✅ Homework (Due: One Week After Lab)
+
+### Required Files in Your Repo
+
+- [ ] `03-build/experiments/experiment-logs/experiment-01-results.md`
+- [ ] `03-build/experiments/experiment-01-analysis.md`
+- [ ] `03-build/experiments/pivot-decision-001.md`
+- [ ] `03-build/experiments/updated-roadmap.md`
+- [ ] Raw data file (CSV or spreadsheet)
+
+### Quality Checks
+
+**experiment-01-results.md:**
+- [ ] Setup section complete
+- [ ] Day-by-day execution log
+- [ ] Raw data table included
+- [ ] Minimum sample size reached (or explained)
+- [ ] 5+ qualitative quotes
+- [ ] Observations documented
+- [ ] Link to raw data file
+
+**experiment-01-analysis.md:**
+- [ ] Results vs. success criteria table
+- [ ] 2+ data visualizations (charts)
+- [ ] Qualitative themes identified
+- [ ] 3+ key learnings documented
+- [ ] Implications for product stated
+- [ ] Statistical significance assessed
+
+**pivot-decision-001.md:**
+- [ ] Clear decision stated (Persevere / Pivot / Iterate)
+- [ ] Rationale is 200+ words
+- [ ] Decision backed by data from experiment
+- [ ] 3+ concrete next steps with owners and dates
+- [ ] Risks identified with mitigation
+- [ ] All team members signed off
+
+**updated-roadmap.md:**
+- [ ] Changes from original roadmap documented
+- [ ] Rationale for changes tied to learnings
+- [ ] 4-week plan with weekly breakdown
+- [ ] Features prioritized/deprioritized with reasoning
+- [ ] New assumptions to test identified
+
+**Raw Data:**
+- [ ] Complete dataset (all participants/visitors)
+- [ ] All metrics tracked
+- [ ] Data is clean (no obvious errors)
+- [ ] Includes timestamp/date information
+- [ ] Linked from results document
+
+### Content Quality
+
+**Execution:**
+- [ ] Experiment ran for planned duration
+- [ ] Any deviations documented with reasoning
+- [ ] Issues encountered documented with resolution
+- [ ] Data collection was systematic
+
+**Analysis:**
+- [ ] Comparison to success criteria is explicit
+- [ ] Visualizations have clear labels
+- [ ] Insights connect to specific data points
+- [ ] Both quantitative and qualitative analysis
+- [ ] Honest about limitations
+
+**Decision:**
+- [ ] Decision matches what data shows
+- [ ] Not ignoring contradictory evidence
+- [ ] Next steps are specific and actionable
+- [ ] Roadmap changes reflect learnings
+
+### Git Commit
+
+- [ ] All files committed
+- [ ] Raw data file committed
+- [ ] Commit message format: "Lab 8 Homework: Experiment 01 - [Decision]"
+- [ ] Pushed to GitHub
+- [ ] All files accessible via GitHub web interface
+
+---
+
+## ✅ Common Mistakes to Avoid
+
+### Execution Phase
+
+❌ Starting experiment Friday night (too late!)  
+❌ Not tracking data daily  
+❌ Changing experiment without documenting  
+❌ Insufficient sample size without explanation  
+❌ No qualitative data collected  
+
+### Analysis Phase
+
+❌ No comparison to success criteria  
+❌ Ignoring data that contradicts assumptions  
+❌ Generic insights ("users want features")  
+❌ No visualizations  
+❌ Not connecting insights to decisions  
+
+### Decision Phase
+
+❌ Claiming validation when missed success criteria  
+❌ Pivoting based on opinion not data  
+❌ Vague next steps ("improve the product")  
+❌ No changes to roadmap despite learnings  
+❌ Not all team members agreeing/signing off  
+
+---
+
+## ✅ Before Final Submission
+
+### Double-Check
+
+- [ ] All filenames match exactly (case-sensitive)
+- [ ] All templates filled out completely
+- [ ] No [placeholder text] remaining
+- [ ] Links work (to data files, dashboards)
+- [ ] Images/charts display correctly
+- [ ] Markdown formatting renders properly in GitHub
+
+### Team Review
+
+- [ ] All team members reviewed all documents
+- [ ] Team discussed and agreed on decision
+- [ ] Everyone signed pivot-decision document
+- [ ] Responsibilities for next steps assigned
+- [ ] Team calendar updated with next milestones
+
+### Final Git Check
+
+```bash
+# Verify all files present
+git status
+
+# Check file structure
+tree 03-build/
+
+# Verify nothing staged but not committed
+git diff --cached
+
+# Push to GitHub
+git push origin main
+
+# Verify on GitHub web interface
+# Open: https://github.com/[your-repo]/tree/main/03-build
+```
+
+---
+
+## ✅ Submission
+
+### Via Class Form
+
+- [ ] Fill out submission form with:
+  - Team name
+  - GitHub repository URL
+  - Experiment decision (Persevere/Pivot/Iterate)
+  - Key learning (one sentence)
+  - Any issues or blockers
+
+### Verification
+
+- [ ] Clicked GitHub link in form to verify it works
+- [ ] Checked that strangers can access your public repo
+- [ ] Verified latest commit shows all homework files
+- [ ] Screenshots taken as backup
+
+---
+
+## ✅ Presentation Prep (If Required)
+
+### 5-Minute Presentation
+
+**Slide 1: What We Tested**
+- Hypothesis in one sentence
+- Why it was risky
+
+**Slide 2: How We Tested**
+- Experiment method
+- Success criteria
+- Sample size
+
+**Slide 3: What We Found**
+- Results vs. target
+- Key insight
+- Surprising finding
+
+**Slide 4: What We're Doing**
+- Decision (Persevere/Pivot/Iterate)
+- Why
+- What's changing
+
+**Slide 5: What's Next**
+- Next 2 weeks plan
+- Next experiment
+- Ask for feedback
+
+### Practice
+
+- [ ] Timed to 5 minutes
+- [ ] Everyone speaks
+- [ ] Transitions smooth
+- [ ] Can answer questions
+- [ ] Backup slides ready (detailed data)
+
+---
+
+## 🎯 Final Verification
+
+**Ask yourself:**
+
+✅ **Can someone else understand our experiment without explanation?**
+
+✅ **Did we test what we said we'd test?**
+
+✅ **Is our decision backed by the data in our documents?**
+
+✅ **Would a stranger looking at our repo know what we did and why?**
+
+✅ **Are we being honest about what we learned (including negatives)?**
+
+If yes to all → You're ready to submit!
+
+---
+
+## 🆘 Last-Minute Issues?
+
+### If you're missing data:
+- Document what happened and why
+- Explain limitations honestly
+- State what you'd do differently
+- Don't fabricate numbers
+
+### If results are unclear:
+- That's okay! Say "inconclusive"
+- Explain why (sample size, methodology, etc.)
+- Propose follow-up experiment
+- Document what you learned anyway
+
+### If you need to resubmit:
+- Check late policy (-10% per 24hrs)
+- Fix issues documented in feedback
+- Recommit with clear message
+- Resubmit via form with "RESUBMISSION" note
+
+---
+
+**Remember:** Learning from failure is success in this class. Be honest about your results!
+
+Good luck! 🚀
+
 ---
 
 **Remember:** The goal isn't to prove you're right. The goal is to learn fast and build something people actually want.
