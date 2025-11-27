@@ -1,6 +1,6 @@
 # Lab 8 Homework: Execute Your First Validation Experiment
 
-**Due Date:** One week from lab date  
+**Due Date:** Lab 8 + Lab 9 (TBA) Sprint Due Thursday December 11th 2025 23:59pm 
 **Points:** 100  
 **Submission:** Via GitHub repository + in-class presentation
 
@@ -460,6 +460,20 @@ After completing this homework, you will have:
 ✅ Muscle memory for the Build-Measure-Learn cycle  
 
 **This is where theory becomes practice. Make it count!**
+
+---
+
+## 🚀 What's Next: Lab 9
+
+After completing your validation experiments, you'll move into financial modeling:
+
+**Lab 9 (Week 11): Unit Economics & Financial Modeling**
+- Calculate LTV (Lifetime Value) and CAC (Customer Acquisition Cost)
+- Build 12-month financial projections
+- Validate business model viability
+- Connect your validated assumptions to unit economics
+
+Your validation learnings from Lab 8 will directly inform your financial assumptions in Lab 9.
 
 ---
 
