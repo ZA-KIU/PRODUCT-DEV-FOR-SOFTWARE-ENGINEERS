@@ -1,331 +1,317 @@
-# Lab 8: Financial Modeling & Go-to-Market Foundation
+# Lab 8: Hypothesis-Driven Development & MVP Validation
 
 **Week 10 | Duration:** 120 minutes (2 hours)  
-**Prerequisites:** Lab 7 completed, Week 10 lecture attended  
-**Repo Location:** `/04-gtm/` and `/04-gtm/financials/`
+**Prerequisites:** Lab 7 completed, Week 8 lecture attended  
+**Repo Location:** `/03-build/experiments/` and `/03-build/validation/`
 
 ---
 
 ## 🎯 Lab Overview
 
-This week marks a critical transition in your capstone project. You've built technical foundations in Labs 6-7 (architecture, analytics, agents). Now it's time to think like a founder: **How will your product make money? How much will it cost to acquire customers? How do you prove traction?**
+You've built your technical architecture (Labs 6-7) and now it's time to answer the critical question: **Will anyone actually want what you're building?**
+
+Today you'll apply hypothesis-driven development principles to identify your riskiest assumptions and design lean experiments to test them BEFORE investing months in building features nobody wants.
 
 ### What You'll Build Today
 
-1. ✅ Calculate unit economics for your product
-2. ✅ Complete LTV:CAC analysis
-3. ✅ Create a 12-month financial model
-4. ✅ Plan your first pricing experiment
-5. ✅ Design a landing page/waitlist strategy
-6. ✅ Set up traction measurement framework
+1. ✅ Map all assumptions underlying your MVP (15-25 assumptions)
+2. ✅ Score and prioritize by risk (identify top 3 "leap of faith" assumptions)
+3. ✅ Design 3 lean experiments to test those assumptions
+4. ✅ Define success metrics (North Star + AARRR framework)
+5. ✅ Plan your first smoke test (landing page/waitlist)
+6. ✅ Create a 2-week validation sprint plan
 
 ---
 
-## 📚 Context: Where We Are
+## 📚 Context: Why This Matters
 
-### Timeline Pressure ⏰
+### The Lean Startup Approach
 
-**Weeks Remaining:** 5 weeks until final presentations
+**Traditional approach (❌):**
+1. Build entire product (3-6 months)
+2. Launch to market
+3. Discover nobody wants it
+4. Pivot or die
 
-**What's at stake:**
-- Week 12: Pitch deck due
-- Week 13: One-pager and investor materials
-- Week 15: Final demo and presentation
+**Lean approach (✅):**
+1. Identify riskiest assumption (1 day)
+2. Design experiment to test it (1 day)
+3. Run experiment (1-2 weeks)
+4. Learn and iterate
+5. Build only validated features
 
-**Without financial clarity:**
-- Can't make informed product decisions
-- Can't prioritize features effectively
-- Can't present credible business case
+### Real Examples
+
+- **Dropbox:** Made video before coding anything → 75,000 signups
+- **Airbnb:** Manual process, professional photos → proved demand
+- **Zappos:** No inventory, manually bought shoes → validated model
+
+**Your goal today:** Set up validation experiments so you learn fast and build right.
 
 ---
 
 ## 🗓️ Lab Structure
 
-| Time | Activity | Deliverable |
-|------|----------|-------------|
-| 0:00-0:15 | Overview & Team Setup | Roles assigned |
-| 0:15-0:45 | Unit Economics Workshop | `unit-economics.md` |
-| 0:45-1:15 | LTV:CAC Analysis | `ltv-cac-analysis.md` |
-| 1:15-1:45 | 12-Month Model Building | `12-month-model.xlsx` |
-| 1:45-2:00 | Next Steps & Homework | Action items |
+| Time | Part | Activity | Deliverable |
+|------|------|----------|-------------|
+| 0:10-0:40 | Part 1 | Hypothesis Mapping | 15-25 assumptions documented |
+| 0:40-1:00 | Part 2 | Risk Prioritization | Top 3 riskiest identified |
+| 1:00-1:30 | Part 3 | Experiment Design | 3 experiments planned |
+| 1:30-1:50 | Part 4 | Success Metrics & Smoke Test | Metrics + smoke test plan |
+| 1:50-2:00 | Part 5 | Validation Sprint Planning | 2-week sprint plan |
 
 ---
 
-## 📋 Getting Started (0:00-0:15)
+## 📋 Learning Objectives
 
-### Key Concepts
+By the end of this lab, you will be able to:
 
-**Unit Economics:** Revenue and costs for ONE customer
-
-**LTV (Lifetime Value):** Total profit from one customer over their lifetime
-
-**CAC (Customer Acquisition Cost):** Cost to acquire one paying customer
-
-**Golden Rule:** LTV:CAC ≥ 3:1 (earn $3 for every $1 spent)
-
-**Payback Period:** Time to recover CAC (target: <12 months)
-
-### Team Roles
-
-Assign for efficiency:
-- **Finance Lead:** Owns calculations and assumptions
-- **Market Researcher:** Finds pricing data and benchmarks
-- **Customer Lead:** References interview insights
-- **Scribe:** Documents decisions and rationale
+✅ **Identify assumptions** - Map all underlying product assumptions across 6 categories  
+✅ **Prioritize risks** - Score assumptions by impact and confidence to find "leap of faith" assumptions  
+✅ **Design experiments** - Create lean experiments with clear success criteria  
+✅ **Define metrics** - Establish North Star metric and AARRR framework  
+✅ **Plan validation** - Create executable 2-week validation sprint
 
 ---
 
-## 📊 Part 1: Unit Economics (0:15-0:45)
+## 📊 Part 1: Hypothesis Mapping (30 minutes)
 
-### Create `/04-gtm/financials/unit-economics.md`
+**Goal:** Identify ALL assumptions your MVP is based on.
 
-Use template from `/lab-8/templates/unit-economics-template.md`
+### Create File
+`03-build/experiments/hypothesis-prioritization.md`
 
-### Activities
+Use template: `/templates/hypothesis-prioritization-template.md`
 
-**Step 1: Choose Monetization Model (5 min)**
+### Process
 
-Options:
-- **Subscription:** $X/month recurring
-- **Transaction Fee:** Y% per transaction  
-- **Freemium:** Free + paid premium
-- **Usage-Based:** Pay per API call/action
-- **One-Time:** Single purchase price
+**Step 1:** Brainstorm assumptions across 6 categories:
+1. Customer Assumptions (who and how they behave)
+2. Problem Assumptions (what problem you're solving)
+3. Solution Assumptions (your proposed solution)
+4. Value Assumptions (willingness to use/pay)
+5. Technical Assumptions (feasibility)
+6. Market Assumptions (market conditions)
 
-**Step 2: Define Your Unit (5 min)**
-- Be specific: "one team account (5-10 users) at $49/month"
-- NOT: "a user" (too vague)
+**Step 2:** Write as "We believe that..." statements
 
-**Step 3: Calculate Revenue Per Unit (10 min)**
-```
-Example - Subscription:
-$29/month × 12 months × (1 - churn rate)
-= $29 × 12 × 0.6 = $209 annual revenue per user
-```
+**Step 3:** Aim for 20-25 total assumptions (4-5 per category)
 
-**Step 4: Calculate Costs Per Unit (15 min)**
-
-Direct costs (COGS):
-- Cloud hosting per user
-- Third-party API costs
-- Support time allocated
-- Payment processing fees
-
-**Step 5: Calculate Gross Margin (5 min)**
-```
-Gross Margin = (Revenue - COGS) / Revenue × 100%
-
-Target: 70-90% for SaaS
-```
-
-### Deliverable ✅
-
-`/04-gtm/financials/unit-economics.md` with:
-- Monetization model chosen
-- Unit defined
-- Revenue calculated
-- Costs itemized
-- Gross margin calculated
+**Checkpoint:** You should have 15-25 distinct, testable assumptions documented.
 
 ---
 
-## 💰 Part 2: LTV:CAC Analysis (0:45-1:15)
+## 💰 Part 2: Risk Prioritization (20 minutes)
 
-### Create `/04-gtm/financials/ltv-cac-analysis.md`
+**Goal:** Identify your 3 riskiest "leap of faith" assumptions.
 
-Use template from `/lab-8/templates/ltv-cac-template.md`
+### Process
 
-### Activities
+**Step 1:** Score each assumption on two dimensions:
+- **Impact if Wrong** (1-5): What happens if false?
+- **Confidence Level** (1-5): How sure are you it's true?
 
-**Step 1: Calculate LTV (15 min)**
-
+**Step 2:** Calculate Risk Score:
 ```
-Simple Formula:
-LTV = ARPU × Gross Margin % × (1 / Churn Rate)
-
-Example:
-$29/month × 76% × (1 / 0.05) = $440.80
+Risk Score = (6 - Confidence) × Impact
 ```
 
-**Step 2: Estimate CAC (15 min)**
+**Step 3:** Sort by Risk Score (highest first)
 
-Pick primary acquisition channel:
+**Step 4:** Document top 3 with:
+- Why it's risky
+- Current evidence (or lack thereof)
+- Consequences if wrong
 
-- **Content/SEO:** $50-100 per customer
-- **Paid Ads:** $500-2,500 per customer
-- **Outbound Sales:** $600+ per customer
-- **Referral/Viral:** $20-50 per customer
-
-Show your work and assumptions!
-
-**Step 3: Calculate Ratio (5 min)**
-
-```
-LTV:CAC Ratio = LTV / CAC
-
-< 1:1 = ❌ NOT VIABLE
-1-3:1 = ⚠️ MARGINAL
-3-5:1 = ✅ HEALTHY
-> 5:1 = 🚀 EXCELLENT
-```
-
-**Step 4: Payback Period (10 min)**
-
-```
-Payback (months) = CAC / (ARPU × Gross Margin %)
-
-Target: < 12 months
-```
-
-### Deliverable ✅
-
-`/04-gtm/financials/ltv-cac-analysis.md` with:
-- LTV calculated (assumptions documented)
-- CAC estimated for primary channel
-- Ratio calculated and assessed
-- Payback period calculated
-- Action items if ratio < 3:1
+**Checkpoint:** Top 3 assumptions identified with full rationale.
 
 ---
 
-## 📈 Part 3: 12-Month Model (1:15-1:45)
+## 🧪 Part 3: Experiment Design (30 minutes)
 
-### Create `/04-gtm/financials/12-month-model.xlsx`
+**Goal:** Design 3 lean experiments to test your riskiest assumptions.
 
-Use template from `/lab-8/templates/12-month-model-template.xlsx`
+### Create File
+`03-build/experiments/experiment-plan.md`
 
-### Activities
+Use template: `/templates/experiment-plan-template.md`
 
-**Step 1: Set Growth Assumptions (10 min)**
+### For Each Experiment, Define:
 
-**Conservative:**
-- Month 3: Launch with 2 customers
-- Month 6: 10 customers
-- Month 12: 30 customers
+1. **Hypothesis Statement**  
+   "We believe [assumption]. We'll know we're right when [measurable outcome]."
 
-**Aggressive (needs proof):**
-- Month 3: Launch with 5 customers
-- Month 6: 50 customers  
-- Month 12: 200 customers
+2. **Experiment Method**  
+   Choose: Smoke test, Concierge MVP, Wizard of Oz, Prototype test, Survey
 
-**Step 2: Build Model (15 min)**
+3. **Success Metrics**  
+   Primary metric + threshold (e.g., "15%+ conversion rate validates")
 
-Key columns:
-- Month
-- New Customers
-- Churned Customers
-- Total Active Customers
-- MRR (Monthly Recurring Revenue)
-- Marketing Spend
-- COGS
-- Gross Profit
+4. **Test Procedure**  
+   4 phases: Setup → Run → Measure → Analyze
 
-**Step 3: Sanity Check (5 min)**
+5. **Timeline**  
+   Specific dates, total duration (should be 1-2 weeks max)
 
-Red flags:
-- ❌ 0 to 1000 customers in 3 months
-- ❌ $0 marketing but rapid growth
-- ❌ Profitable in Month 1
+6. **Potential Outcomes**  
+   If validated / invalidated / inconclusive → next steps
 
-Reality checks:
-- ✅ Losses early (investing in CAC)
-- ✅ Gradual revenue growth
-- ✅ Breakeven around Month 10-12
-
-### Deliverable ✅
-
-`/04-gtm/financials/12-month-model.xlsx` with:
-- 12-month projections
-- Realistic customer growth
-- MRR trajectory
-- Marketing spend tracked
-- Gross profit path shown
+**Checkpoint:** 3 complete experiment designs with all sections filled.
 
 ---
 
-## 🎬 Part 4: Wrap-up & Homework Preview (1:45-2:00)
+## 📈 Part 4: Success Metrics & Smoke Tests (20 minutes)
 
-### What You Built
+**Goal:** Define what "success" means and plan your first validation test.
 
-Today you:
-1. ✅ Defined monetization model
-2. ✅ Calculated unit economics
-3. ✅ Analyzed LTV:CAC
-4. ✅ Created 12-month projection
+### Create Files
+1. `03-build/validation/success-metrics.md`
+2. `03-build/validation/smoke-test-plan.md`
 
-### Critical Path Forward
+### Success Metrics (10 min)
 
-**Week 10 (This Week):**
-- ✅ Financial model complete
-- 🎯 Landing page live
-- 🎯 Pricing experiment running
+**North Star Metric:** One metric that captures value delivered  
+Examples: Active users, Tasks completed, Time saved
 
-**Week 11:**
-- 🎯 Traction metrics (100+ visitors, 5+ signups)
-- 🎯 One-pager draft
+**AARRR Framework:** Set targets for:
+- **Acquisition:** How users find you
+- **Activation:** First valuable action
+- **Retention:** Return behavior (Day 7)
+- **Revenue/Value:** Engagement if not monetized
+- **Referral:** Word of mouth
 
-**Week 12-15:**
-- 🎯 Pitch deck
-- 🎯 Final refinements
-- 🎯 Demo & presentation
+### Smoke Test Plan (10 min)
 
-### Homework Preview
+Design a landing page or waitlist to validate demand:
+- Headline and value proposition
+- 3-5 key benefits
+- Call to action
+- Success criteria (conversion rate threshold)
+- 3 distribution channels with expected reach
 
-**Due Monday:** Financial model refined
-**Due Wednesday:** Landing page live OR pricing experiment  
-**Due Friday:** Traction framework set up
+**Checkpoint:** Success metrics defined and smoke test designed.
 
-See `HOMEWORK.md` for full details.
+---
+
+## 🏃 Part 5: Validation Sprint Planning (10 minutes)
+
+**Goal:** Plan the next 2 weeks of validation work.
+
+### Create File
+`03-build/validation/validation-sprint-plan.md`
+
+Use template: `/templates/validation-sprint-plan-template.md`
+
+### Plan Structure
+
+**Week 1:**
+- Days 1-2: Build experiment assets
+- Day 3: Launch
+- Days 4-7: Monitor and collect data
+
+**Week 2:**
+- Days 1-3: Continue testing
+- Day 4: Analyze results
+- Day 5: Team decision (pivot/persevere)
+
+Include:
+- Daily tasks with owners
+- Success criteria for sprint
+- Risks and backup plans
+
+**Checkpoint:** 2-week plan with daily breakdown complete.
+
+---
+
+## ✅ Lab Deliverables
+
+Before you leave today, commit these 5 files:
+
+- [ ] `03-build/experiments/hypothesis-prioritization.md`
+- [ ] `03-build/experiments/experiment-plan.md`
+- [ ] `03-build/validation/success-metrics.md`
+- [ ] `03-build/validation/smoke-test-plan.md`
+- [ ] `03-build/validation/validation-sprint-plan.md`
+
+```bash
+git add 03-build/experiments/ 03-build/validation/
+git commit -m "Lab 8: Hypothesis-driven development plan complete"
+git push origin main
+```
+
+---
+
+## 🎯 Grading (10 points)
+
+**Lab Participation:**
+- Hypothesis Mapping: 2 pts (15+ assumptions)
+- Risk Prioritization: 2 pts (all scored, top 3 identified)
+- Experiment Design: 3 pts (3 complete experiments)
+- Success Metrics: 2 pts (North Star + AARRR)
+- Validation Sprint: 1 pt (2-week plan)
+
+**Homework:** 100 points (due 1 week from today)  
+See `LAB-8-HOMEWORK.md` for details.
 
 ---
 
 ## 📚 Resources
 
-### Templates
-- `/lab-8/templates/unit-economics-template.md`
-- `/lab-8/templates/ltv-cac-template.md`
-- `/lab-8/templates/12-month-model-template.xlsx`
-- `/lab-8/templates/pricing-experiment-template.md`
-- `/lab-8/templates/landing-page-template.md`
+### Templates (in /templates/)
+- hypothesis-prioritization-template.md
+- experiment-plan-template.md
+- success-metrics-template.md
+- smoke-test-plan-template.md
+- validation-sprint-plan-template.md
 
-### Examples
-- `/lab-8/examples/sample-unit-economics.md`
-- `/lab-8/examples/sample-ltv-cac.md`
-- `/lab-8/examples/sample-financial-model.xlsx`
+### Examples (in /examples/)
+- smoke-test-example.md - Complete StudySync case study
 
-### Reading
-- SaaS Metrics 2.0 by David Skok (LTV/CAC section)
-- Sequoia Business Plan Template (Financial section)
+### Guides (in /resources/)
+- validation-best-practices.md - Comprehensive methodology guide
 
 ---
 
 ## ❓ FAQ
 
-**Q: Our product will be free. Do we still need this?**
-A: Yes! Calculate cost per user and show sustainability path (grants, future monetization).
+**Q: Can we skip validation and just build?**  
+A: No. 70% of startups fail because they build things nobody wants. Validation is required.
 
-**Q: All our numbers are guesses. Is that okay?**
-A: Yes, WITH documentation. "Assumption: 5% churn based on industry average [source]."
+**Q: What if we don't have users to test with yet?**  
+A: That's what smoke tests are for—validate interest BEFORE building.
 
-**Q: Our LTV:CAC is 0.5:1. What do we do?**
-A: Three options: (1) Lower CAC, (2) Raise LTV, (3) Pivot pricing model.
+**Q: Our experiment will take 4 weeks. Is that okay?**  
+A: No. That's not lean. Break it into a 1-2 week experiment that tests one assumption.
 
-**Q: How do we estimate churn with zero customers?**
-A: Use industry benchmarks: B2B SaaS 5-7%, Consumer 15-25%. Document source.
-
----
-
-## 🎯 Success Criteria
-
-By end of lab:
-
-- [ ] Unit economics complete with all calculations
-- [ ] LTV calculated with documented assumptions
-- [ ] CAC estimated for chosen channel
-- [ ] LTV:CAC ratio calculated (plan if < 3:1)
-- [ ] 12-month model with realistic projections
-- [ ] Team ready for homework deliverables
+**Q: What if our results are negative?**  
+A: That's valuable! Better to learn now in Week 10 than in Week 15 during your final demo.
 
 ---
 
-**Let's build businesses that make financial sense. 💰🚀**
+## 🚀 What's Next
+
+### This Week (Homework)
+- Execute Experiment 1
+- Collect data (minimum sample size)
+- Analyze results
+- Make pivot/persevere decision
+- Update roadmap based on learnings
+
+### Next Week (Lab 9)
+- Unit Economics & Financial Modeling
+- LTV:CAC analysis
+- 12-month financial projections
+- Business model validation
+
+---
+
+## 💡 Remember
+
+> "The goal of a startup is to learn what customers really want, and will pay for, as quickly as possible." - Eric Ries
+
+**You're not trying to prove you're right.**  
+**You're trying to learn fast and build something people actually want.**
+
+---
+
+**Let's validate those assumptions! 🚀**
