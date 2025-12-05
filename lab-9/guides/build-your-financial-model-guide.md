@@ -88,6 +88,8 @@ LTV = $______ per customer
 
 ---
 Here is a Shortcut: - **[Professor Zeshan AI Financial Modelor] https://aistudio.google.com/apps/drive/1f4HhQVSoAEN6Q7S5s9FaBVf127vjZkdP?fullscreenApplet=true&showPreview=true&showAssistant=true
+Click on the AI Assistant and answer the questions and generate a model for your business and export to sheets
+
 ## 🚀 Building Your Financial Model: Step-by-Step
 
 ### Step 1: Open a New Google Sheet
