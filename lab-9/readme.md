@@ -60,6 +60,7 @@
 ### 📖 Guides to Reference:
 - **[Complete Lab Guide](lab-9-complete-guide.md)** - Detailed instructions for all 2 hours
 - **[Build Your Financial Model](lab-9-build-your-financial-model-guide.md)** - How to auto-generate your 12-month model
+- **[Professor Zeshan AI Financial Modelor] https://aistudio.google.com/apps/drive/1f4HhQVSoAEN6Q7S5s9FaBVf127vjZkdP?fullscreenApplet=true&showPreview=true&showAssistant=true
 
 ### 🎓 Background Reading:
 - Week 10 Lecture Slides: Unit Economics
