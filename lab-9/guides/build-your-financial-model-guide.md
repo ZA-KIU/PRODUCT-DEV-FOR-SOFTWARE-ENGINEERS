@@ -87,7 +87,7 @@ LTV = $______ per customer
 **Don't have all these?** Make reasonable estimates and document them as "Estimated - to be validated"
 
 ---
-
+Here is a Shortcut: - **[Professor Zeshan AI Financial Modelor] https://aistudio.google.com/apps/drive/1f4HhQVSoAEN6Q7S5s9FaBVf127vjZkdP?fullscreenApplet=true&showPreview=true&showAssistant=true
 ## 🚀 Building Your Financial Model: Step-by-Step
 
 ### Step 1: Open a New Google Sheet
