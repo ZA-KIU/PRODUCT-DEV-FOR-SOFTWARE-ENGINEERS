@@ -53,18 +53,18 @@
 ## 📦 Materials You Need
 
 ### 📝 Templates to Fill Out:
-1. **[Unit Economics Template](lab-9-template-unit-economics.md)** - For CAC, LTV calculations (Part 1)
-2. **[Valuation Method Template](lab-9-template-valuation-method.md)** - For VC Method calculations (Part 2)
-3. **[Comparables Analysis Template](lab-9-template-comps-analysis.md)** - For researching similar companies (Part 2)
+1. **[Unit Economics Template](templates/unit-economics-template.md)** - For CAC, LTV calculations (Part 1)
+2. **[Valuation Method Template](templates/company-valuation-analysis-template.md)** - For VC Method calculations (Part 2)
+3. **[Comparables Analysis Template](templates/comparable-companies-template.md)** - For researching similar companies (Part 2)
+4. **[Financial Model Structure Template](templates/financial-model-structure-template.md)** - Reference for spreadsheet structure
 
 ### 📖 Guides to Reference:
-- **[Complete Lab Guide](lab-9-complete-guide.md)** - Detailed instructions for all 2 hours
-- **[Build Your Financial Model](lab-9-build-your-financial-model-guide.md)** - How to auto-generate your 12-month model
-- **[Professor Zeshan AI Financial Modelor] https://aistudio.google.com/apps/drive/1f4HhQVSoAEN6Q7S5s9FaBVf127vjZkdP?fullscreenApplet=true&showPreview=true&showAssistant=true
+- **[Build Your Financial Model Guide](guides/build-your-financial-model-guide.md)** - How to auto-generate your 12-month model
+- **[Professor Zeshan AI Financial Modeler](https://aistudio.google.com/apps/drive/1f4HhQVSoAEN6Q7S5s9FaBVf127vjZkdP?fullscreenApplet=true&showPreview=true&showAssistant=true)** - AI assistant for generating your model
 
 ### 🎓 Background Reading:
 - Week 10 Lecture Slides: Unit Economics
-- Week 11 Lecture Slides: Valuation Methods (yesterdays lecture)
+- Week 11 Lecture Slides: Valuation Methods (yesterday's lecture)
 
 ---
 
@@ -91,7 +91,6 @@
 /05-fundraising/valuation/
 ```
 
-
 ---
 
 ## 📊 Part 1: Calculate Your Unit Economics (30 min)
@@ -100,7 +99,7 @@
 Calculating the fundamental metrics that show if your business model works.
 
 ### Use This Template:
-**[Unit Economics Template](lab-9-template-unit-economics.md)**
+**[Unit Economics Template](templates/unit-economics-template.md)**
 
 ### You'll Calculate:
 
@@ -152,7 +151,7 @@ Calculate:
 Creating an automated 12-month financial projection that uses YOUR numbers.
 
 ### Use This Guide:
-**[Build Your Financial Model Guide](lab-9-build-your-financial-model-guide.md)**
+**[Build Your Financial Model Guide](guides/build-your-financial-model-guide.md)**
 
 ### The Easy Way (Google Sheets Apps Script):
 
@@ -194,7 +193,7 @@ Creating an automated 12-month financial projection that uses YOUR numbers.
 Figuring out how much your company is worth using two methods.
 
 ### Use This Template:
-**[Valuation Method Template](lab-9-template-valuation-method.md)**
+**[Valuation Method Template](templates/company-valuation-analysis-template.md)**
 
 ### Method 1: VC Method (20 min)
 
@@ -218,7 +217,7 @@ Year 5: $3.6M (2x growth)
 - Calculate: Valuation / Revenue = Multiple
 - Take the median
 
-**Use this template:** [Comparables Analysis Template](lab-9-template-comps-analysis.md)
+**Use this template:** [Comparables Analysis Template](templates/comparable-companies-template.md)
 
 **Example Comparables:**
 - Company A: 10x revenue multiple
@@ -418,8 +417,6 @@ git push origin main
 | **Valuation Analysis** | 30 | VC Method + Comparables, good research, sensitivity analysis |
 | **Presentation** | 10 | Professional slide, clean GitHub, consistent numbers |
 
-**Full rubric:** [Lab 9 Grading Rubric](lab-9-grading-rubric.md)
-
 ---
 
 ## 💡 Success Tips
@@ -482,7 +479,7 @@ git push origin main
 ## ❓ Frequently Asked Questions
 
 **Q: Do I need to finish everything in lab today?**  
-A: No! Use today to make solid progress, but you have until Monday to complete everything.
+A: No! Use today to make solid progress, but you have until Thursday to complete everything.
 
 **Q: What if I don't have customers yet?**  
 A: Use estimated CAC based on your planned marketing spend. Use industry benchmark churn rates. Document as "Estimated - to be validated."
@@ -572,27 +569,23 @@ This is a lot of work, but you're not doing it alone:
 
 ## 📚 Quick Links
 
-**Templates:**
-- [Unit Economics Template](lab-9-template-unit-economics.md)
-- [Valuation Method Template](lab-9-template-valuation-method.md)
-- [Comparables Analysis Template](lab-9-template-comps-analysis.md)
-- [Quick Checklist](lab-9-quick-checklist.md) ← **PRINT THIS!**
+### Templates:
+- [Unit Economics Template](templates/unit-economics-template.md)
+- [Valuation Method Template](templates/company-valuation-analysis-template.md)
+- [Comparables Analysis Template](templates/comparable-companies-template.md)
+- [Financial Model Structure Template](templates/financial-model-structure-template.md)
 
-**Guides:**
-- [Complete Lab Guide](lab-9-complete-guide.md)
-- [Build Your Financial Model](lab-9-build-your-financial-model-guide.md)
-
-**Grading:**
-- [Grading Rubric](lab-9-grading-rubric.md)
+### Guides:
+- [Build Your Financial Model Guide](guides/build-your-financial-model-guide.md)
+- [AI Financial Modeler Tool](https://aistudio.google.com/apps/drive/1f4HhQVSoAEN6Q7S5s9FaBVf127vjZkdP?fullscreenApplet=true&showPreview=true&showAssistant=true)
 
 ---
 
 ## 🚀 Ready to Start?
 
-1. ✅ Print your [Quick Checklist](lab-9-quick-checklist.md)
-2. ✅ Open [Unit Economics Template](lab-9-template-unit-economics.md)
-3. ✅ Create your GitHub folders
-4. ✅ Start with Part 1: Calculate your CAC!
+1. ✅ Open [Unit Economics Template](templates/unit-economics-template.md)
+2. ✅ Create your GitHub folders
+3. ✅ Start with Part 1: Calculate your CAC!
 
 **See you in lab! Let's build something great! 🎉**
 
@@ -600,7 +593,7 @@ This is a lot of work, but you're not doing it alone:
 
 **Lab 9: Financial Modeling & Valuation**  
 **CS-PD-2025: Product Development for Software Engineers**  
-**Kakheti International University**  
+**Kutaisi International University**  
 **Professor Zeshan Ahmad**
 
-**Questions?** zeshan.ahmad@kiu.edu.ge | Office Hours: Tuesdays 2-4 PM
+**Questions?** zeshan.ahmad@kiu.edu.ge
