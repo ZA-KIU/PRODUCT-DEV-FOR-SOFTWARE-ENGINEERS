@@ -3,8 +3,6 @@ Repo: https://github.com/ZA-KIU/PRODUCT-DEV-FOR-SOFTWARE-ENGINEERS
 
 This README is a navigation layer. Use it to move through the full product lifecycle, from problem selection to launch, measurement, and iteration.
 
-> Note on repo parsing: GitHub’s folder pages do not expose file listings reliably in this environment. I can confirm the top-level structure (labs 1–11) and link into each lab folder. Add a short `README.md` inside each lab folder later, then this top-level README becomes a full “table of contents” down to the file level.
-
 ---
 
 ## Quick start path
